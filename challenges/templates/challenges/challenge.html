@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends  "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ month_name | title}}_challenges</title>
-</head>
+{% block page_title  %}
+{{ month_name | title}}_challenges
+{% endblock %}
 
+{% block content %}
+<!下面這行是要跳轉的功能>
+{% include "./includes/header.html"%}
 <body>
     <h1>{{ month_name | title}}_challenges</h1>
     {% if  text is not None %}
@@ -16,5 +15,4 @@
         <h2>There is not challenges for this month yet!</h2>
     {% endif %}
 </body>
-
-</html>
+{% endblock %}
