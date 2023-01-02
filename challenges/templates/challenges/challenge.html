@@ -6,7 +6,7 @@
 
 {% block content %}
 <!下面這行是要跳轉的功能>
-{% include "./includes/header.html"%}
+{% include "./includes/header.html" with active_page="challenge"%}
 <body>
     <h1>{{ month_name | title}}_challenges</h1>
     {% if  text is not None %}
