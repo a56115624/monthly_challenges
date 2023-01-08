@@ -125,3 +125,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 加下面這行為了讓 static能夠在全局被找到,切記如果沒加會找不到
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
